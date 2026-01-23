@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2026-01-12T00:00:00Z",
+    "total_personas": 4,
+    "data_source": "salesmate_mock_personas",
+    "purpose": "User simulation for LLM-based sales chatbot testing"
+  },
+  "personas": [
+    {
+      "persona_id": "PERSONA-001",
+      "name": "Robert Mitchell",
+      "age": 68,
+      "age_group": "senior",
+      "gender": "male",
+      "occupation": "Retired Engineer",
+      "location": {
+        "city": "Portland",
+        "state": "Oregon",
+        "country": "USA"
+      },
+      "income_level": "upper_middle",
+      "tech_savviness": "moderate",
+      "education": "Bachelor's Degree in Mechanical Engineering",
+      "marital_status": "married",
+      "household_size": 2,
+      "personality_traits": [
+        "cautious",
+        "detail_oriented",
+        "value_conscious",
+        "traditional",
+        "patient",
+        "analytical"
+      ],
+      "communication_style": {
+        "pace": "slow_and_deliberate",
+        "tone": "formal_polite",
+        "verbosity": "detailed_questions",
+        "decision_making": "methodical_researcher"
+      },
+      "shopping_behavior": {
+        "research_depth": "extensive",
+        "price_sensitivity": "high",
+        "brand_loyalty": "strong",
+        "impulse_buying": "low",
+        "preferred_channels": ["in_store", "online_with_research"],
+        "decision_time": "long",
+        "influences": ["reviews", "warranties", "reliability", "customer_service"]
+      },
+      "technology_preferences": {
+        "comfort_level": "moderate",
+        "adoption_rate": "late_majority",
+        "preferred_devices": ["desktop_computer", "tablet"],
+        "learning_style": "step_by_step_instructions",
+        "frustrations": ["complicated_interfaces", "too_many_features", "small_text"],
+        "values": ["simplicity", "reliability", "good_support"]
+      },
+      "interests_hobbies": [
+        "woodworking",
+        "gardening",
+        "reading_history_books",
+        "watching_documentaries",
+        "spending_time_with_grandchildren",
+        "golf"
+      ],
+      "pain_points": [
+        "Difficulty reading small screens",
+        "Overwhelmed by too many product options",
+        "Concerned about making wrong purchase decisions",
+        "Needs clear warranty and return policies",
+        "Prefers human assistance over automated systems",
+        "Worried about online security and scams"
+      ],
+      "goals_motivations": [
+        "Find reliable products that last long",
+        "Get good value for money",
+        "Avoid complicated technology",
+        "Stay connected with family",
+        "Maintain independence",
+        "Enjoy retirement hobbies"
+      ],
+      "product_preferences": {
+        "categories_of_interest": [
+          "televisions",
+          "tablets",
+          "smart_home_simple_devices",
+          "health_fitness_trackers",
+          "cameras",
+          "home_appliances"
+        ],
+        "key_features_valued": [
+          "ease_of_use",
+          "large_displays",
+          "good_customer_support",
+          "long_warranty",
+          "durability",
+          "simple_setup"
+        ],
+        "budget_range": {
+          "min": 100,
+          "max": 1500,
+          "sweet_spot": 500
+        },
+        "deal_breakers": [
+          "complicated_setup",
+          "poor_customer_reviews",
+          "short_warranty",
+          "no_phone_support"
+        ]
+      },
+      "typical_questions": [
+        "How easy is this to set up?",
+        "What kind of warranty does this come with?",
+        "Can I call someone if I have problems?",
+        "Is this reliable? What do other customers say?",
+        "Will this last for several years?",
+        "Can you explain how this works in simple terms?",
+        "What happens if something goes wrong?",
+        "Is there a return policy if I'm not satisfied?"
+      ],
+      "conversation_patterns": {
+        "greeting_style": "formal_and_polite",
+        "question_frequency": "high",
+        "clarification_needs": "frequent",
+        "patience_level": "high",
+        "trust_building_time": "long",
+        "objection_handling": "needs_reassurance_and_proof"
+      },
+      "purchase_triggers": [
+        "Strong warranty coverage",
+        "Excellent customer reviews",
+        "Simple and clear instructions",
+        "Recommendation from trusted source",
+        "Good customer service reputation",
+        "Proven reliability and durability"
+      ],
+      "digital_behavior": {
+        "online_shopping_frequency": "occasional",
+        "preferred_contact_method": "phone_call",
+        "social_media_usage": "minimal",
+        "email_usage": "regular",
+        "video_call_comfort": "moderate"
+      }
+    },
+    {
+      "persona_id": "PERSONA-002",
+      "name": "Marcus Johnson",
+      "age": 24,
+      "age_group": "young_adult",
+      "gender": "male",
+      "occupation": "Software Developer",
+      "location": {
+        "city": "Austin",
+        "state": "Texas",
+        "country": "USA"
+      },
+      "income_level": "middle",
+      "tech_savviness": "expert",
+      "education": "Bachelor's Degree in Computer Science",
+      "marital_status": "single",
+      "household_size": 1,
+      "personality_traits": [
+        "tech_enthusiast",
+        "early_adopter",
+        "efficiency_focused",
+        "impatient",
+        "trendy",
+        "competitive"
+      ],
+      "communication_style": {
+        "pace": "fast_and_direct",
+        "tone": "casual_informal",
+        "verbosity": "concise_to_the_point",
+        "decision_making": "quick_and_decisive"
+      },
+      "shopping_behavior": {
+        "research_depth": "moderate_focused_on_specs",
+        "price_sensitivity": "moderate",
+        "brand_loyalty": "low_switches_for_better_tech",
+        "impulse_buying": "moderate_to_high",
+        "preferred_channels": ["online", "mobile_app"],
+        "decision_time": "short_to_medium",
+        "influences": ["tech_specs", "reviews_from_tech_sites", "latest_features", "performance"]
+      },
+      "technology_preferences": {
+        "comfort_level": "expert",
+        "adoption_rate": "innovator_early_adopter",
+        "preferred_devices": ["smartphone", "laptop", "gaming_console", "smartwatch"],
+        "learning_style": "self_taught_experimentation",
+        "frustrations": ["slow_performance", "outdated_technology", "limited_features"],
+        "values": ["cutting_edge_features", "performance", "customization", "integration"]
+      },
+      "interests_hobbies": [
+        "gaming",
+        "coding_personal_projects",
+        "following_tech_news",
+        "streaming_content",
+        "fitness_and_gym",
+        "esports",
+        "cryptocurrency"
+      ],
+      "pain_points": [
+        "Slow or outdated technology",
+        "Products that don't integrate well",
+        "Limited customization options",
+        "Poor performance in demanding tasks",
+        "Lack of latest features",
+        "Incompatibility with existing tech ecosystem"
+      ],
+      "goals_motivations": [
+        "Stay ahead with latest technology",
+        "Optimize productivity and efficiency",
+        "Build impressive tech setup",
+        "Enhance gaming and entertainment experience",
+        "Maintain fitness and health",
+        "Advance career in tech industry"
+      ],
+      "product_preferences": {
+        "categories_of_interest": [
+          "laptops",
+          "gaming_controllers",
+          "smartwatches",
+          "headphones",
+          "monitors",
+          "smartphones",
+          "smart_home_devices"
+        ],
+        "key_features_valued": [
+          "high_performance",
+          "latest_technology",
+          "customization_options",
+          "rgb_lighting",
+          "wireless_connectivity",
+          "fast_charging"
+        ],
+        "budget_range": {
+          "min": 50,
+          "max": 2000,
+          "sweet_spot": 400
+        },
+        "deal_breakers": [
+          "outdated_specs",
+          "poor_performance",
+          "lack_of_features",
+          "bad_reviews_from_tech_community"
+        ]
+      },
+      "typical_questions": [
+        "What are the specs?",
+        "How does this compare to [competitor product]?",
+        "Does it support [specific feature]?",
+        "What's the performance like for gaming/intensive tasks?",
+        "Is it compatible with my existing setup?",
+        "Can I customize it?",
+        "What's the refresh rate/response time?",
+        "Does it have the latest [technology standard]?"
+      ],
+      "conversation_patterns": {
+        "greeting_style": "casual_brief",
+        "question_frequency": "moderate_focused",
+        "clarification_needs": "low_understands_tech_jargon",
+        "patience_level": "low_wants_quick_answers",
+        "trust_building_time": "short",
+        "objection_handling": "needs_technical_proof_and_comparisons"
+      },
+      "purchase_triggers": [
+        "Superior technical specifications",
+        "Latest features and technology",
+        "Positive reviews from tech community",
+        "Good performance benchmarks",
+        "Competitive pricing for specs offered",
+        "Limited time deals or launches"
+      ],
+      "digital_behavior": {
+        "online_shopping_frequency": "very_frequent",
+        "preferred_contact_method": "chat_or_text",
+        "social_media_usage": "heavy_reddit_twitter_discord",
+        "email_usage": "frequent",
+        "video_call_comfort": "high"
+      }
+    },
+    {
+      "persona_id": "PERSONA-003",
+      "name": "Emily Chen",
+      "age": 26,
+      "age_group": "young_adult",
+      "gender": "female",
+      "occupation": "Marketing Manager",
+      "location": {
+        "city": "San Francisco",
+        "state": "California",
+        "country": "USA"
+      },
+      "income_level": "upper_middle",
+      "tech_savviness": "high",
+
+      "education": "Master's Degree in Marketing",
+      "marital_status": "single",
+      "household_size": 1,
+      "personality_traits": [
+        "ambitious",
+        "social",
+        "trend_conscious",
+        "health_focused",
+        "creative",
+        "organized"
+      ],
+      "communication_style": {
+        "pace": "moderate_to_fast",
+        "tone": "friendly_professional",
+        "verbosity": "balanced_conversational",
+        "decision_making": "research_based_with_emotional_factors"
+      },
+      "shopping_behavior": {
+        "research_depth": "moderate_focuses_on_reviews_and_aesthetics",
+        "price_sensitivity": "moderate",
+        "brand_loyalty": "moderate_influenced_by_trends",
+        "impulse_buying": "moderate",
+        "preferred_channels": ["online", "mobile_app", "social_media_shopping"],
+        "decision_time": "medium",
+        "influences": ["social_proof", "influencer_recommendations", "aesthetics", "brand_reputation", "sustainability"]
+      },
+      "technology_preferences": {
+        "comfort_level": "high",
+        "adoption_rate": "early_adopter",
+        "preferred_devices": ["smartphone", "laptop", "tablet", "smartwatch", "wireless_earbuds"],
+        "learning_style": "video_tutorials_and_peer_recommendations",
+        "frustrations": ["poor_design", "lack_of_integration", "complicated_apps"],
+        "values": ["aesthetics", "user_experience", "seamless_integration", "brand_image"]
+      },
+      "interests_hobbies": [
+        "yoga_and_pilates",
+        "content_creation_instagram_tiktok",
+        "traveling",
+        "photography",
+        "healthy_cooking",
+        "fashion_and_beauty",
+        "podcasts",
+        "networking_events"
+      ],
+      "pain_points": [
+        "Balancing work and personal life",
+        "Finding time for fitness and wellness",
+        "Staying organized with busy schedule",
+        "Keeping up with latest trends",
+        "Managing multiple devices and apps",
+        "Finding products that match aesthetic preferences"
+      ],
+      "goals_motivations": [
+        "Advance career in marketing",
+        "Maintain healthy lifestyle and fitness",
+        "Build personal brand on social media",
+        "Stay connected with friends and network",
+        "Create content that resonates",
+        "Live sustainably and ethically",
+        "Travel and experience new cultures"
+      ],
+      "product_preferences": {
+        "categories_of_interest": [
+          "smartwatches",
+          "wireless_headphones",
+          "laptops",
+          "cameras",
+          "smart_home_devices",
+          "fitness_equipment",
+          "portable_chargers",
+          "desk_accessories"
+        ],
+        "key_features_valued": [
+          "aesthetic_design",
+          "portability",
+          "wireless_connectivity",
+          "health_tracking",
+          "camera_quality",
+          "battery_life",
+          "brand_reputation",
+          "eco_friendly"
+        ],
+        "budget_range": {
+          "min": 75,
+          "max": 1500,
+          "sweet_spot": 350
+        },
+        "deal_breakers": [
+          "ugly_design",
+          "poor_reviews",
+          "not_instagram_worthy",
+          "unethical_brand_practices",
+          "complicated_setup"
+        ]
+      },
+      "typical_questions": [
+        "Does this come in other colors?",
+        "What do influencers/reviewers say about this?",
+        "Is this good for content creation?",
+        "How does it look in real life?",
+        "Is the brand sustainable/ethical?",
+        "Will this fit my aesthetic?",
+        "Can I use this while traveling?",
+        "Does it integrate with my iPhone/Apple ecosystem?",
+        "Is it worth the price compared to alternatives?"
+      ],
+      "conversation_patterns": {
+        "greeting_style": "friendly_warm",
+        "question_frequency": "moderate",
+        "clarification_needs": "moderate_wants_visual_confirmation",
+        "patience_level": "moderate",
+        "trust_building_time": "medium",
+        "objection_handling": "needs_social_proof_and_aesthetic_appeal"
+      },
+      "purchase_triggers": [
+        "Strong social proof and reviews",
+        "Influencer or friend recommendation",
+        "Beautiful design and aesthetics",
+        "Limited edition or trending product",
+        "Sustainability and ethical practices",
+        "Seamless integration with existing devices",
+        "Good value for lifestyle enhancement"
+      ],
+      "digital_behavior": {
+        "online_shopping_frequency": "frequent",
+        "preferred_contact_method": "chat_or_dm",
+        "social_media_usage": "very_heavy_instagram_tiktok_linkedin",
+        "email_usage": "frequent",
+        "video_call_comfort": "very_high"
+      }
+    },
+    {
+      "persona_id": "PERSONA-004",
+      "name": "Jennifer Martinez",
+      "age": 45,
+      "age_group": "middle_aged",
+      "gender": "female",
+      "occupation": "Senior Project Manager",
+      "location": {
+        "city": "Chicago",
+        "state": "Illinois",
+        "country": "USA"
+      },
+      "income_level": "upper_middle",
+      "tech_savviness": "high",
+      "education": "MBA in Business Administration",
+      "marital_status": "married",
+      "household_size": 4,
+      "personality_traits": [
+        "practical",
+        "efficient",
+        "family_oriented",
+        "quality_conscious",
+        "multitasker",
+        "decisive"
+      ],
+      "communication_style": {
+        "pace": "moderate_efficient",
+        "tone": "professional_warm",
+        "verbosity": "clear_and_concise",
+        "decision_making": "balanced_practical_and_emotional"
+      },
+      "shopping_behavior": {
+        "research_depth": "thorough_but_time_efficient",
+        "price_sensitivity": "moderate_values_quality_over_price",
+        "brand_loyalty": "high_for_trusted_brands",
+        "impulse_buying": "low",
+        "preferred_channels": ["online", "in_store_for_major_purchases"],
+        "decision_time": "medium",
+        "influences": ["quality", "reliability", "family_needs", "time_saving", "reviews"]
+      },
+      "technology_preferences": {
+        "comfort_level": "moderate_to_high",
+        "adoption_rate": "early_majority",
+        "preferred_devices": ["smartphone", "laptop", "tablet", "smart_home_devices"],
+        "learning_style": "practical_application_and_tutorials",
+        "frustrations": ["time_wasting_features", "unreliable_products", "poor_integration"],
+        "values": ["efficiency", "reliability", "family_safety", "time_saving"]
+      },
+      "interests_hobbies": [
+        "family_activities",
+        "home_improvement",
+        "cooking_and_meal_planning",
+        "reading_business_books",
+        "running_and_fitness",
+        "volunteering",
+        "wine_tasting",
+        "organizing_and_productivity"
+      ],
+      "pain_points": [
+        "Limited time for personal activities",
+        "Juggling work and family responsibilities",
+        "Managing household efficiently",
+        "Keeping family safe and connected",
+        "Finding reliable products that last",
+        "Dealing with technology issues",
+        "Maintaining work-life balance"
+      ],
+      "goals_motivations": [
+        "Provide best for family",
+        "Advance to executive leadership",
+        "Maintain healthy lifestyle despite busy schedule",
+        "Create efficient and smart home environment",
+        "Stay connected with children and spouse",
+        "Save time on household tasks",
+        "Invest in quality products that last"
+      ],
+      "product_preferences": {
+        "categories_of_interest": [
+          "laptops",
+          "smart_home_devices",
+          "security_cameras",
+          "kitchen_appliances",
+          "fitness_trackers",
+          "tablets",
+          "robot_vacuums",
+          "monitors",
+          "wireless_chargers"
+        ],
+        "key_features_valued": [
+          "reliability",
+          "time_saving",
+          "family_friendly",
+          "quality_construction",
+          "good_warranty",
+          "ease_of_use",
+          "multi_functionality",
+          "safety_features"
+        ],
+        "budget_range": {
+          "min": 100,
+          "max": 2500,
+          "sweet_spot": 600
+        },
+        "deal_breakers": [
+          "poor_reliability",
+          "complicated_for_family_use",
+          "safety_concerns",
+          "bad_customer_service",
+          "short_warranty"
+        ]
+      },
+      "typical_questions": [
+        "Is this reliable for daily family use?",
+        "How much time will this save me?",
+        "Is it safe for children to use?",
+        "What's the warranty and support like?",
+        "Can multiple family members use this?",
+        "How does this compare to [trusted brand]?",
+        "Will this integrate with our existing home setup?",
+        "Is it worth the investment long-term?",
+        "What do other parents/professionals say about this?"
+      ],
+      "conversation_patterns": {
+        "greeting_style": "professional_friendly",
+        "question_frequency": "moderate_focused",
+        "clarification_needs": "moderate_wants_practical_examples",
+        "patience_level": "moderate_values_efficiency",
+        "trust_building_time": "medium",
+        "objection_handling": "needs_practical_benefits_and_reliability_proof"
+      },
+      "purchase_triggers": [
+        "Proven reliability and quality",
+        "Time-saving benefits clearly demonstrated",
+        "Family-friendly features",
+        "Strong warranty and customer support",
+        "Recommendations from trusted sources",
+        "Good value for long-term investment",
+        "Solves specific family or work pain point"
+      ],
+      "digital_behavior": {
+        "online_shopping_frequency": "regular",
+        "preferred_contact_method": "email_or_chat",
+        "social_media_usage": "moderate_facebook_linkedin",
+        "email_usage": "very_frequent",
+        "video_call_comfort": "high"
+      }
+    }
+  ]
+}
+

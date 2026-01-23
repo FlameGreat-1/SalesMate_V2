@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  * {
+    @apply border-purple-structural/20;  
+ }
+
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-text-primary;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-purple-structural text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-purple-structural rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-purple-structural-light;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-glass backdrop-blur-md border border-purple-structural rounded-lg;
+  }
+
+  .glass-button {
+    @apply bg-glass backdrop-blur-sm border border-purple-structural 
+           hover:border-purple-structural-light hover:shadow-glow-sm
+           transition-all duration-200 rounded-lg px-4 py-2;
+  }
+
+  .input-glass {
+    @apply bg-glass backdrop-blur-sm border border-purple-structural
+           focus:border-purple-structural-light focus:shadow-glow-sm
+           focus:outline-none transition-all duration-200 rounded-lg
+           px-4 py-2 text-text-primary placeholder:text-text-muted;
+  }
+
+  .ambient-glow {
+    position: relative;
+  }
+
+  .ambient-glow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(138, 85, 247, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    filter: blur(40px);
+    z-index: -1;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent;
+  }
+
+  .loading-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(74, 63, 95, 0.1) 0%,
+      rgba(90, 79, 111, 0.2) 50%,
+      rgba(74, 63, 95, 0.1) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-tap-highlight {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.animate-zoom {
+  animation: zoom 1.5s ease-in-out infinite;
+}
