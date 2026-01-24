@@ -8,13 +8,52 @@ import { useConversations, useConversationDetail } from '@/lib/hooks/useConversa
 import { useChat } from '@/lib/hooks/useChat';
 
 export function ConversationList() {
-  const { conversations, isLoading, error } = useConversations();
+  const { conversations, isLoading, error, hasMore, loadMore, reset } = useConversations();
   const { currentConversation, setConversation } = useChat();
   const router = useRouter();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const hasNavigated = useRef(false);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+  const topRef = useRef<HTMLDivElement>(null);
   
   const { conversation: detailConversation, messages, isLoading: isLoadingDetail } = useConversationDetail(selectedId);
+
+  // Reset to 10 when scrolling back to top
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!topRef.current) return;
+      
+      const rect = topRef.current.getBoundingClientRect();
+      
+      // If top element is visible (back at top), reset to 10
+      if (rect.top >= 0 && rect.top <= 100) {
+        reset();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [reset]);
+
+  // Auto-load more when scrolling down
+  useEffect(() => {
+    if (!hasMore || isLoading) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMore();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasMore, isLoading, loadMore]);
 
   useEffect(() => {
     if (detailConversation && messages && !isLoadingDetail && !hasNavigated.current) {
@@ -22,14 +61,14 @@ export function ConversationList() {
       hasNavigated.current = true;
       router.push('/chat');
     }
-  }, [detailConversation, messages, isLoadingDetail]);
+  }, [detailConversation, messages, isLoadingDetail, setConversation, router]);
 
   const handleConversationClick = (conversationId: string) => {
     hasNavigated.current = false;
     setSelectedId(conversationId);
   };
 
-  if (isLoading) {
+  if (isLoading && conversations.length === 0) {
     return (
       <div className="flex items-center justify-center h-64">
         <Spinner size="lg" />
@@ -65,6 +104,7 @@ export function ConversationList() {
 
   return (
     <div className="space-y-3">
+      <div ref={topRef} className="h-0" />
       {conversations.map((conversation) => (
         <ConversationItem
           key={conversation.id}
@@ -73,6 +113,12 @@ export function ConversationList() {
           onClick={() => handleConversationClick(conversation.id)}
         />
       ))}
+      
+      {hasMore && (
+        <div ref={loadMoreRef} className="flex justify-center py-4">
+          <Spinner size="sm" />
+        </div>
+      )}
     </div>
   );
 }

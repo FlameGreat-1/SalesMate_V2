@@ -48,7 +48,7 @@ export default function ChatPage() {
           onClick={handleStartNewConversation}
           isLoading={isStarting}
         >
-          Start Chatting
+          Start
         </Button>
       </div>
     </div>

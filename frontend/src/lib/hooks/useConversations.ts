@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { historyAPI } from '@/lib/api/history';
 import { useAuth } from './useAuth';
@@ -10,8 +11,11 @@ const QUERY_KEYS = {
   detail: (id: string) => ['conversations', id] as const,
 };
 
+const CONVERSATIONS_PER_PAGE = 10;
+
 export function useConversations() {
   const { isAuthenticated } = useAuth();
+  const [displayCount, setDisplayCount] = useState(CONVERSATIONS_PER_PAGE);
 
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: QUERY_KEYS.conversations,
@@ -25,12 +29,31 @@ export function useConversations() {
     refetchInterval: 30 * 1000,
   });
 
+  const allConversations = data?.conversations || [];
+  
+  const displayedConversations = useMemo(() => {
+    return allConversations.slice(0, displayCount);
+  }, [allConversations, displayCount]);
+
+  const hasMore = displayCount < allConversations.length;
+
+  const loadMore = () => {
+    setDisplayCount(prev => prev + CONVERSATIONS_PER_PAGE);
+  };
+
+  const reset = () => {
+    setDisplayCount(CONVERSATIONS_PER_PAGE);
+  };
+
   return {
-    conversations: data?.conversations || [],
-    total: data?.total || 0,
+    conversations: displayedConversations,
+    total: allConversations.length,
     isLoading,
     error,
     refetch,
+    hasMore,
+    loadMore,
+    reset,
   };
 }
 
