@@ -48,7 +48,7 @@ export function useProfile() {
       queryClient.setQueryData(QUERY_KEYS.profile, updatedProfile);
       updateAuthProfile(updatedProfile);
     },
-    onError: (error, variables, context) => {
+    onError: (_error, _variables, context) => {
       if (context?.previousProfile) {
         queryClient.setQueryData(QUERY_KEYS.profile, context.previousProfile);
       }
@@ -74,7 +74,7 @@ export function useProfile() {
       queryClient.setQueryData(QUERY_KEYS.profile, updatedProfile);
       updateAuthProfile(updatedProfile);
     },
-    onError: (error, variables, context) => {
+    onError: (_error, _variables, context) => {
       if (context?.previousProfile) {
         queryClient.setQueryData(QUERY_KEYS.profile, context.previousProfile);
       }
@@ -100,7 +100,7 @@ export function useProfile() {
       queryClient.setQueryData(QUERY_KEYS.profile, updatedProfile);
       updateAuthProfile(updatedProfile);
     },
-    onError: (error, variables, context) => {
+    onError: (_error, _variables, context) => {
       if (context?.previousProfile) {
         queryClient.setQueryData(QUERY_KEYS.profile, context.previousProfile);
       }
