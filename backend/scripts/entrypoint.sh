@@ -49,7 +49,8 @@ echo ">>> Checking Pinecone index status..."
 PINECONE_COUNT=$(python -c "
 from src.vector.pinecone_client import get_pinecone_client
 client = get_pinecone_client()
-stats = client.describe_index_stats()
+index = client.get_index()
+stats = index.describe_index_stats()
 print(stats.total_vector_count)
 " 2>/dev/null || echo "0")
 

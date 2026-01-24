@@ -27,9 +27,7 @@ htmlcov/
 .gitignore
 
 # Documentation
-docs/
 *.md
-!README.md
 
 # Logs
 logs/*.log

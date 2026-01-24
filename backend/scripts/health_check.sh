@@ -26,7 +26,8 @@ echo -n "Pinecone: "
 python -c "
 from src.vector.pinecone_client import get_pinecone_client
 client = get_pinecone_client()
-stats = client.describe_index_stats()
+index = client.get_index()
+stats = index.describe_index_stats()
 print('✓ OK' if stats.total_vector_count > 0 else '✗ FAILED')
 "
 

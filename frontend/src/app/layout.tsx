@@ -3,7 +3,7 @@ import { Providers } from './providers';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'SalesMate AI - Your Intelligent Shopping Assistant',
+  title: 'SalesMate - Your Intelligent Shopping Assistant',
   description: 'Find the perfect products with AI-powered recommendations',
 };
 
