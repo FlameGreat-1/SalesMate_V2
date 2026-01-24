@@ -22,11 +22,8 @@ export default function HomePage() {
   }, [isAuthenticated, isLoading, profile, router]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <Spinner size="lg" className="mx-auto mb-4" />
-        <p className="text-text-secondary">Loading SalesMate AI...</p>
-      </div>
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <Spinner size="lg" />
     </div>
   );
 }
