@@ -21,6 +21,7 @@ from src.services.llm.streaming import (
 )
 from src.services.llm.intent_analyzer import IntentAnalyzer
 
+
 class LLMService:
     
     def __init__(self):
@@ -68,20 +69,6 @@ class LLMService:
         conversation_stage: str = "discovery",
         stream: bool = False
     ) -> Union[str, AsyncGenerator[str, None]]:
-        """
-        Generate LLM response with optional streaming.
-        
-        Args:
-            user_id: User ID
-            messages: Conversation messages
-            available_products: Filtered products (TIER 2)
-            full_catalog: Complete product catalog (TIER 1)
-            conversation_stage: Current conversation stage
-            stream: If True, returns AsyncGenerator for streaming
-            
-        Returns:
-            str if stream=False, AsyncGenerator[str, None] if stream=True
-        """
         try:
             user = self.user_repo.get_by_id(user_id)
             profile = self.profile_repo.get_by_user_id(user_id)
@@ -437,14 +424,26 @@ class LLMService:
         except Exception as e:
             raise LLMError(f"Failed to generate comparison: {str(e)}")
     
-    def analyze_intent(self, user_message: str) -> Dict[str, Any]:
+    def analyze_intent(
+        self, 
+        user_message: str, 
+        conversation_history: Optional[List[Dict[str, str]]] = None
+    ) -> Dict[str, Any]:
         try:
-            analysis_prompt = self.intent_analyzer.get_analysis_prompt()
-            
-            messages = [
-                {"role": "system", "content": analysis_prompt},
-                {"role": "user", "content": user_message}
-            ]
+            if conversation_history:
+                analysis_prompt = self.intent_analyzer.build_analysis_prompt_with_context(
+                    conversation_history=conversation_history,
+                    current_message=user_message
+                )
+                messages = [
+                    {"role": "system", "content": analysis_prompt}
+                ]
+            else:
+                analysis_prompt = self.intent_analyzer.get_analysis_prompt()
+                messages = [
+                    {"role": "system", "content": analysis_prompt},
+                    {"role": "user", "content": user_message}
+                ]
             
             if settings.llm.provider == "openai":
                 response = self._call_openai_with_retry(messages)

@@ -231,10 +231,10 @@ Response style:
                 features_str = ', '.join([f[0] for f in top_features])
                 context_parts.append(f"- Values: {features_str}")
         
-        context_parts.append("\nCRITICAL RULES:")
-        context_parts.append("1. You do NOT know their budget unless they tell you")
+        context_parts.append("\nHOW TO USE CUSTOMER DATA:")
+        context_parts.append("1. Use budget to filter and prioritize recommendations when they ask for suggestions")
         context_parts.append("2. ONLY discuss products they explicitly ask about")
-        context_parts.append("3. DO NOT suggest products from their background interests unless they ask")
+        context_parts.append("3. Do NOT mention their profile data unprompted (e.g., don't say 'based on your profile...')")
         context_parts.append("4. Answer their questions directly without suggesting unrelated products")
         context_parts.append("5. Ask questions sparingly - only when necessary")
         context_parts.append("6. Be concise and focused on their actual request")
