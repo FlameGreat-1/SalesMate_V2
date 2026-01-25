@@ -106,7 +106,7 @@ class RecommendationEngine:
         vector_results = self.vector_search.search(
             query=query,
             top_k=search_limit,
-            min_score=0.4,
+            min_score=0.25,
             filters=filters if filters else None
         )
         
